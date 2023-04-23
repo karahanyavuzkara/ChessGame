@@ -30,8 +30,7 @@ public abstract class Move {
 
        public AttackMove(final Board board,
                    final Piece movedPiece,
-                   final int destinationCoordinate,
-                   final Piece attackedPiece){
+                   final int destinationCoordinate){
             super(board,movedPiece,destinationCoordinate);
             this.attackedPiece = attackedPiece;
         }
