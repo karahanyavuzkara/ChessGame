@@ -10,13 +10,13 @@ import java.util.Collection;
 import java.util.List;
 
 public class Pawn extends Piece{
-    private final int[] CANDIDATE_MOVE_COORDINATE = {8};
-    Pawn(int piecePosition, Alliance pieceAlliance) {
+    private final int[] CANDIDATE_MOVE_COORDINATE = {8, 16};
+    Pawn(final int piecePosition, final Alliance pieceAlliance) {
         super(piecePosition, pieceAlliance);
     }
 
     @Override
-    public Collection<Move> calculateLegalMoves(Board board) {
+    public Collection<Move> calculateLegalMoves(final Board board) {
         final List<Move> legalMoves = new ArrayList<>();
         for (final int currentCandidateOffset : CANDIDATE_MOVE_COORDINATE){
             int candidateDestinationCoordinate = this.piecePosition + (this.getPieceAlliance().getDirection() * currentCandidateOffset);
@@ -24,9 +24,14 @@ public class Pawn extends Piece{
                 continue;
             }
             if (currentCandidateOffset == 8 && board.getTile(candidateDestinationCoordinate).isTileOccupied()){
-                //todo more work !!!
+                //todo more work (vezire çevirme isleri son karoda) !!!
                 legalMoves.add(new Move.MajorMove(board, this, candidateDestinationCoordinate));
-
+            }else if (currentCandidateOffset == 16 && this.isFirstMove() &&(BoardUtils.SECOND_ROW[this.piecePosition]
+                    && this.getPieceAlliance().isBlack()) ||
+                    (BoardUtils.SEVENTH_ROW[this.piecePosition] && this.getPieceAlliance().isWhite())) {
+                final int behindCandidateDestinationCoordinate = this.piecePosition + (this.pieceAlliance.getDirection() * 8 );
+                if (!board.getTile(behindCandidateDestinationCoordinate).isTileOccupied() && !board.getTile(candidateDestinationCoordinate).isTileOccupied()) {
+                }
             }
         }
         return legalMoves;
