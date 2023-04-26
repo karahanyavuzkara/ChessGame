@@ -13,7 +13,7 @@ import com.google.common.collect.ImmutableList;
 
 public class Pawn extends Piece{
     private final int[] CANDIDATE_MOVE_COORDINATE = {8, 16, 7, 9};
-    Pawn(final int piecePosition, final Alliance pieceAlliance) {
+    public Pawn(final int piecePosition, final Alliance pieceAlliance) {
         super(piecePosition, pieceAlliance);
     }
 
