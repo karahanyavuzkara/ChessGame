@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="502e9431-90cb-418a-b733-a1b81f709e3e" name="Changes" comment="1">
+      <change afterPath="$PROJECT_DIR$/src/com/chess/engine/player/BlackPlayer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/chess/engine/player/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/chess/engine/player/WhitePlayer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/chess/engine/board/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/board/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chess/engine/pieces/Pawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/chess/engine/pieces/Pawn.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +63,9 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.chess.engine.player" />
+    </key>
     <key name="MoveMembersDialog.RECENTS_KEY">
       <recent name="com.chess.engine.board.BoardUtils" />
     </key>
@@ -102,7 +107,7 @@
       <workItem from="1682516534399" duration="3488000" />
       <workItem from="1683309157973" duration="45000" />
       <workItem from="1685013246162" duration="617000" />
-      <workItem from="1685298233947" duration="10347000" />
+      <workItem from="1685298233947" duration="11372000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1682006708250</created>
@@ -223,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685541238063</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="1">
+      <created>1685563556398</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1685563556398</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
