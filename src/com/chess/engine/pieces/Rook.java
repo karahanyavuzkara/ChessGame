@@ -16,7 +16,7 @@ public class Rook extends Piece{
 
 
     public Rook(int piecePosition, Alliance pieceAlliance) {
-        super(piecePosition, pieceAlliance);
+        super(piecePosition, pieceAlliance,PieceType.ROOK);
     }
 
     @Override
