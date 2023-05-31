@@ -42,7 +42,7 @@ public class Pawn extends Piece{
                 if (board.getTile(candidateDestinationCoordinate).isTileOccupied()) {
                 }
                 pieceOnCandidate = board.getTile(candidateDestinationCoordinate).getPiece();
-                if (this.pieceAlliance != pieceOnCandidate.getPieceAlliance()) {
+                if (this.pieceAlliance != null && pieceOnCandidate != null && this.pieceAlliance != pieceOnCandidate.getPieceAlliance()) {
                     //todo more
 
                     legalMoves.add(new MajorMove(board, this, candidateDestinationCoordinate));
@@ -53,17 +53,17 @@ public class Pawn extends Piece{
                 if (board.getTile(candidateDestinationCoordinate).isTileOccupied()) {
                 }
                 pieceOnCandidate = board.getTile(candidateDestinationCoordinate).getPiece();
-                if (this.pieceAlliance != pieceOnCandidate.getPieceAlliance()) {
+                if (this.pieceAlliance != null && pieceOnCandidate != null && this.pieceAlliance != pieceOnCandidate.getPieceAlliance()) {
                     //todo more
 
                     legalMoves.add(new MajorMove(board, this, candidateDestinationCoordinate));
                 }
             }
         }
-            return ImmutableList.copyOf(legalMoves);
-        }
+        return ImmutableList.copyOf(legalMoves);
+    }
     @Override
     public String toString() {
         return PieceType.PAWN.toString();
     }
-    }
+}

@@ -24,9 +24,9 @@ public class Board {
         final StringBuilder builder = new StringBuilder();
         for (int i = 0; i < BoardUtils.NUM_TIlES; i++) {
             final String tileText = this.gameBoard.get(i).toString();
-            builder.append(String.format("½3s", tileText));
+            builder.append(String.format("%3s", tileText));
             if ((i + 1) % BoardUtils.NUM_TILES_PER_ROW == 0) {
-                builder.append("/n");
+                builder.append("\n");
             }
         }
         return builder.toString();
